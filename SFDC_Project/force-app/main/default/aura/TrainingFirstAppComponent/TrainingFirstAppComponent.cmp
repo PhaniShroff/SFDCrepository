@@ -1,0 +1,13 @@
+<aura:component 
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" 
+                access="global" >
+    
+    <aura:attribute name="FirstName" type="string" default="John" 
+                    description="This is a field for Emp name"/>
+    
+    <aura:attribute name="LastName" type="string" default="Chris" 
+                    description="This is a field for Emp name"/>
+    
+	
+    The variable that we just stored is {!v.FirstName},{!v.LastName}
+</aura:component>

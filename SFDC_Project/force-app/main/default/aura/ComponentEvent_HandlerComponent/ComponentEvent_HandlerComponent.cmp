@@ -1,0 +1,14 @@
+<aura:component >
+    <aura:attribute name = "messageFromEvent" type = "string"/>
+    <aura:attribute name = "numOfEventsCalled" type = "integer" default = "0"/>
+    <aura:handler name = "cmpEventName" event = "c.TrainingComponentEvent_Event" action = "{!c.handleComponentEvent}"/>
+    <div class = "slds-page-header">
+    <div class = "slds-media__body">
+        <h1 class = "slds-page-header__title slds-truncate slds-align-middle">Case study of component event</h1>
+        </div>
+    </div>
+    <c:ComponentEvent_NotifierComponent/>
+    {!v.messageFromEvent}
+    Number of events:{!v.numOfEventsCalled}
+	
+</aura:component>

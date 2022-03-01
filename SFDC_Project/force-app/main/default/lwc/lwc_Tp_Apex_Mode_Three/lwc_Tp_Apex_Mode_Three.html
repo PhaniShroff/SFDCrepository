@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Fetch data from apex mode three" icon-name="custom:custom26">
+        <div> 
+            <lightning-button label="Load Accounts" onclick={handleLoad}></lightning-button>
+            
+            <template if:true={accounts}>
+                <template for:each={accounts} for:item="acc">
+                    <p key={acc.Id}>{acc.Name}  </p>
+
+                </template>
+            </template>
+
+            <template if:true={error}>
+                {error}
+            </template>
+        </div>
+    </lightning-card>
+</template>

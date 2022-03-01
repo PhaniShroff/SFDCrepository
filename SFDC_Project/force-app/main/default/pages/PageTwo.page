@@ -1,0 +1,35 @@
+<apex:page controller="InsuranceSystemClass" >
+    <apex:form >
+        <apex:pageBlock >
+        <apex:pageBlockSection columns="2" >
+        <apex:commandButton value="Add Agent" />
+        <apex:commandButton value="View Agent"  />
+        <apex:outputLabel > Name </apex:outputLabel>
+            <apex:inputText value="{!Name}"/>
+            <apex:outputLabel > DOB(mm/dd/yyy) </apex:outputLabel>
+            <apex:inputText value="{!DOB}"/>
+        <apex:outputLabel > Gender </apex:outputLabel>
+            <apex:inputText value="{!Gender}"/>
+        <apex:outputLabel > Phone </apex:outputLabel>
+            <apex:inputText value="{!Phone}"/>
+        <apex:outputLabel > Email </apex:outputLabel>
+            <apex:inputText value="{!Email}"/>
+        <apex:outputLabel > Registration_date(mm/dd/yyy) </apex:outputLabel>
+            <apex:inputText value="{!Registration_date}"/>
+        <apex:outputLabel > Address </apex:outputLabel>
+            <apex:inputText value="{!Address}"/>
+            <apex:commandButton value="Save" action="{!SaveHandler}"/>
+            <apex:commandButton value="Save & New" action="{SaveAndNew}"/>
+            <apex:commandButton value="Cancel"/>
+            
+            
+           
+            
+             </apex:pageBlockSection>
+        </apex:pageBlock>
+
+       
+    
+        
+    </apex:form>
+</apex:page>

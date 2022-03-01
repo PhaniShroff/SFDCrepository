@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Loan Calculatr" icon-name="custom:custom36">
+        <lightning-input label="Enter pricipal amount" onchange={PrincipalAmountHandler}></lightning-input>
+        <lightning-input label="Enter Time" onchange={TimeHandler}></lightning-input>
+        <lightning-input label="Enter ROI" onchange={ROIHandler}></lightning-input>
+        <br><br>
+        <lightning-button variant="success" label="Calculate Interest" icon-position="center" onclick={InterestHandler}></lightning-button>
+        <br><br>
+        <lightning-formatted-text value={LoanResult}></lightning-formatted-text>
+
+    </lightning-card>
+
+    
+</template>

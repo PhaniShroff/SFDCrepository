@@ -1,0 +1,23 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+<!-- 
+    <ui:inputText label = "First Name" aura:id = "EnteredFirstName"/>
+     <ui:inputText label = "Last Name" aura:id = "EnteredLastName"/>
+    <ui:button label = "submit" press = "{!c.callMe}"/> 
+-->
+<!--
+    <ui:inputText label = "Name" aura:id = "EnteredName"/>
+    <ui:button label = "submit" press = "{!c.callMe}"/>
+    <ui:outputText aura:id = "NameToDisplay" value = ""/>
+-->
+<!-- <ui:inputText label = "First Name" aura:id = "EnteredFN"/>
+    <ui:inputText label = "Last Name" aura:id = "EnteredLN"/>
+    <ui:button label = "submit" press = "{!c.callMe}"/>   
+    <ui:outputText aura:id = "OutlookName" value = ""/>
+-->
+    
+    <ui:inputText label = "First Name" aura:id = "EnteredFN"/>
+    <ui:inputText label = "Last Name" aura:id = "EnteredLN"/>
+    <ui:inputText label = "Age" aura:id = "EnteredAge"/>
+     <ui:button label = "check eligibility" press = "{!c.callMe}"/>   
+    <ui:outputText aura:id = "message" value = ""/>
+</aura:component>

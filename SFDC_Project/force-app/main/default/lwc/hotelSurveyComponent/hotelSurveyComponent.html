@@ -1,0 +1,43 @@
+<template>
+    <lightning-card title="Hotel Survey" icon-name="custom:custom36">
+        Q1. Were the staff friendly and helpful?
+        <br>
+        <lightning-checkbox-group options={options} 
+                                  value={value} 
+                                  onchange={handleChangeForOne}>
+        </lightning-checkbox-group>
+        {numberOfPointsOfOne}
+        <br>
+        Q2. Did the staff respond quickly?
+        <br>
+        <lightning-checkbox-group options={options} 
+                                  value={value} 
+                                  onchange={handleChangeForTwo}>
+        </lightning-checkbox-group>
+        {numberOfPointsOfTwo}
+        <br>
+        Q3. Was your room comfortable and clean?
+        <br>
+        <lightning-checkbox-group options={options} 
+                                  value={value} 
+                                  onchange={handleChangeForThree}>
+        </lightning-checkbox-group>
+        {numberOfPointsOfThree}
+        <br>
+        Q4. Do you think that the hotel provides value for money?
+        <br>
+        <lightning-checkbox-group options={options} 
+                                  value={value} 
+                                  onchange={handleChangeForFour}>
+        </lightning-checkbox-group>
+        {numberOfPointsOfFour}
+        <br><br>
+        The overall percentage is = {Percentage}
+
+        <br><br>                                                 
+        <lightning-button variant="success" label="Submit" onclick={reviewPercentage}></lightning-button>
+        <br><br>
+        <lightning-formatted-text value={Percentage}></lightning-formatted-text>
+         
+    </lightning-card>
+</template>

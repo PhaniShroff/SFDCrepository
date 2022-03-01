@@ -1,0 +1,18 @@
+<aura:component >
+    <aura:attribute name="whichButtonPressed_ID" type="string"/>
+    <aura:attribute name="whichButtonPressed_Name" type="string"/>
+
+    <div class="slds-page-header">
+        <div class="slds-media__body">
+            <h1 class="slds-page-header__title slds-truncate slds-align-middle">Get Button Source</h1>
+        </div>
+    </div>
+    You clicked button with ID:{!v.whichButtonPressed_ID}
+    <br/>
+    You clicked button with name:{!v.whichButtonPressed_Name}
+    <br/>
+    <lightning:button aura:id = "button1" name = 'Button one' label = 'Please click me' onclick = "{!c.callJSCode}"/>
+    <lightning:button aura:id = "button2" name = 'Button two' label = 'click me too' onclick = "{!c.callJSCode}"/>
+
+	
+</aura:component>

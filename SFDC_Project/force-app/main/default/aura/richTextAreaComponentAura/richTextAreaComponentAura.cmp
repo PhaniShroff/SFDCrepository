@@ -1,0 +1,11 @@
+<aura:component implements="lightning:availableForFlowScreens">
+    <aura:attribute name="value" type="String" />
+    <aura:attribute name="label" type="String" />
+    <aura:attribute name="required" type="Boolean" />
+    <aura:attribute name="placeholder" type="String" />
+    <lightning:inputRichText labelVisible="true"
+                             label="{!v.label}"
+                             required="{!v.required}"
+                             value="{!v.value}" 
+                             placeholder="{!v.placeholder}"/>
+</aura:component>

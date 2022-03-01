@@ -1,0 +1,7 @@
+<aura:component controller="BeerSearchAuraService">
+  <aura:attribute name="beerList" type="Object" />
+    <aura:handler name="BeerEvent" event="c:SearchCompEvent_One" action="{!c.handleEvent}"/>
+	<c:HeaderComp_One TagLine="Search beer" message="order beer"></c:HeaderComp_One>
+    <c:SearchComp_One></c:SearchComp_One>
+    <c:BeerListComp_One recordList="{!v.beerList}"></c:BeerListComp_One>
+</aura:component>

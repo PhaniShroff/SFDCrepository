@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Fetch data from apex-wire a function mode two" icon-name="custom:custom35">
+        <div>
+            <template if:true={accounts}>
+                <template for:each={accounts} for:item="acc">
+                <p key={acc.Id}>{acc.Name} ---> {acc.Phone} </p>
+
+                </template>
+            </template>
+
+            <template if:true={error}>
+            {error}
+            </template>
+        </div> 
+    </lightning-card>
+    
+</template>

@@ -1,0 +1,6 @@
+<aura:component >
+    
+    <ui:inputText label="Full Name" aura:id="EnteredName" placeholder="First,Last"/>
+    <lightning:button aura:id="ButtonForAction" label="Submit" onclick="{!c.getInfo}"/>
+    <ui:outputText aura:id="NameToDisplay" value=""/>
+</aura:component>

@@ -1,0 +1,8 @@
+<aura:component >
+    <aura:registerEvent name = "cmpEventName" type = "c:TrainingComponentEvent_Event"/>
+    <br/>
+    <br/>
+    
+    <lightning:button label = "click here to fire a component event" onclick = "{!c.fireComponentEvent}"/>
+    <br/>
+</aura:component>

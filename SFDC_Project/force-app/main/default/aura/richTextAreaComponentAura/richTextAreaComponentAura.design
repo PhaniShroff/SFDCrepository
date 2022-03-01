@@ -1,0 +1,7 @@
+<design:component>
+    <design:attribute name="value" description="The value for rich text area component"/>
+    <design:attribute name="label" description="The label for rich text area component"/>
+    <design:attribute name="required" description="Required input which is true or false"/>
+    <design:attribute name="placeholder" description="The placeholder for rich text area component"/>
+	
+</design:component>

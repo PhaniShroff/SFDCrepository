@@ -1,0 +1,20 @@
+<aura:component >
+    <aura:attribute name="recordList" type="object"/>
+    <aura:iteration items="{!v.recordList}" var="item">
+        <div class="slds-col slds-size_1-of-4 slds-p-around_small">
+            <lightning:card variant="Narrow" title="{!item.Name}" iconName="standard:account" footer="Card Footer">
+                <div class="slds-col slds-size_2-of-3">
+                    Name:{!item.Name} <br/>
+                    Id:{!item.Id__c} <br/>
+                    Alcohol %:{!item.Alcohol__c}
+                </div>
+                <aura:set attribute="actions">
+                    <lightning:button name="{!item.Id}" variant="base" label="View Details" onclick="{! c.handleClick }"/>
+                </aura:set>
+            </lightning:card>
+        </div>
+        
+    </aura:iteration>
+    
+    
+</aura:component>

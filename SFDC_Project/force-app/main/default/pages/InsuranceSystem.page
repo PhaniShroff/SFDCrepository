@@ -1,0 +1,11 @@
+<apex:page controller="InsuranceSystemClass" >
+    <apex:form >
+        <apex:commandButton value="Agent"     />
+        <apex:commandButton value="Policy Holder"  />
+        <apex:commandButton value="Life Insurance" />
+         <apex:commandButton value="Motor Insurance" />
+        
+    
+        
+    </apex:form>
+</apex:page>

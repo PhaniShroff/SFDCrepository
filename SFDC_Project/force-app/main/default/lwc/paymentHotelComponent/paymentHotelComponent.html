@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Payment details" icon-name="custom:custom20">
+    <lightning-input label="Card Number" value={paymentObjCn} name="paymentCn" onchange={paymentObjHandler}></lightning-input>
+    <lightning-input label="Expiry Month" value={paymentObjEm} name="paymentEm" onchange={paymentObjHandler}></lightning-input>
+    <lightning-input label="Expiry Year" value={paymentObjEy} name="paymentEy" onchange={paymentObjHandler}></lightning-input>
+    <lightning-input label="CVV" value={paymentObjCvv} name="paymentCvv" onchange={paymentObjHandler}></lightning-input>
+    <lightning-button label="Submit" onclick={handlePayment} variant="success"></lightning-button>
+</lightning-card>
+</template>

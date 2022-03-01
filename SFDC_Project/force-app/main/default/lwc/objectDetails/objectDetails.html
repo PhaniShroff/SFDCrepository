@@ -1,0 +1,49 @@
+<template>
+    
+        <div class="slds-m-around_small">
+          <lightning-card>
+            <lightning-tabset variant="scoped" active-tab-value="event">
+                <lightning-tab label="Details" value="event">
+                    <div class="slds-m-around_small">
+                        <lightning-record-form
+                            record-id={recordId}
+                            mode="readonly"
+                            layout-type="Full"
+                            columns="2"
+                            object-api-name="Object__c">
+                 
+                        </lightning-record-form>
+                    </div>
+                </lightning-tab>
+                <div class="slds-m-around_small">
+                    <lightning-tab
+                        label="Fields"
+                        value="speaker"
+                        >
+                        <lightning-card  variant="Narrow"  title="Object Fields" icon-name="standard:account">
+                            <div class="slds-clearfix">
+                                <div class="slds-float_right">
+                                    <lightning-button label="Add fields" class="slds-m-left_x-small"></lightning-button>
+                                    <lightning-button label="Edit fields" class="slds-m-left_x-small"></lightning-button>
+                                    
+                                </div>
+                            </div>
+                                <lightning-datatable
+                                        key-field="id"
+                                        data={fieldList}
+                                        columns={columnsList}>
+                                </lightning-datatable>
+                        </lightning-card>
+                        
+                    </lightning-tab>
+               
+
+                </div>
+              
+        
+            </lightning-tabset>
+        </lightning-card>
+              </div>
+
+
+</template>

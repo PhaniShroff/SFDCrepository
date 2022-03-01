@@ -1,0 +1,105 @@
+<!-- sldsValidatorIgnore -->
+
+<template>
+    <lightning-card title="Guest Details" icon-name="custom:custom36">
+        <lightning-input label="First name" value={guestObjFirstName} name="guestFirstName" onchange={guestHandleChange}></lightning-input>
+        <lightning-input label="Last name" value={guestObjLastName} name="guestLastName" onchange={guestHandleChange}></lightning-input>
+        <lightning-input label="Phone" value={guestObjPhone} name="guestPhone" onchange={guestHandleChange}></lightning-input>
+        <lightning-input label="Email" value={guestObjEmail} name="guestEmail" onchange={guestHandleChange}></lightning-input>
+        <lightning-input label="Number of Adults(12 yrs+)"></lightning-input>
+        <lightning-input label="Number of children(0-12 yrs)"></lightning-input>
+        <lightning-input label="Checkin date"></lightning-input>
+        <lightning-input label="Checkout date"></lightning-input>
+
+        <div class="slds-form-element">
+            <label class="slds-form-element__label" for="select-01">Select City</label>
+                <div class="slds-form-element__control">
+                    <div class="slds-select_container">
+                    <select class="slds-select" id="select-01" onchange={onValueSelection}>
+                    <template for:each={hotelCityNames.data} for:item="htl">
+                        <option key={htl.Name} value={htl.Name}>
+                            {hotelCityNames.Name}
+                        </option>
+                    </template>
+                    </select>
+                    </div>
+                </div>
+        </div>
+
+        <template if:true={hotels}>
+            <lightning-card title="Hotels List">
+                <div style="height: 300px;">
+                        <lightning-datatable
+                                                key-field="Id"
+                                                data={HotelMasters}
+                                                columns={columns}>
+                        </lightning-datatable>
+
+                </div>
+            </lightning-card>
+        
+        
+                <br><br>                       
+        
+            <lightning-button label="Submit" onclick={submitAction} variant="brand"></lightning-button>
+        
+            <br><br>
+
+            <lightning-button label="Navigate to another LWC" onclick={navigateToLWCUsingAura} variant="brand"></lightning-button>
+        
+        </template>
+    </lightning-card>
+    
+</template>
+
+
+<!--
+<template>
+    <lightning-card >
+        <div class="slds-page-header slds-page-header--object-home">
+            <lightning-layout>
+                <lightning-layout-item >
+                    <lightning-icon icon-name="standard:contact" alternative-text="Contact" ></lightning-icon>
+                </lightning-layout-item>
+                <lightning-layout-item class="slds-m-left--small">
+                    <p class="slds-text-title--caps slds-line-height--reset">Accounts</p>
+                    <h1 class="slds-page-header__title slds-p-right--x-small">Contact
+                        Viewer</h1>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout >
+                <lightning-layout-item >
+                    <p class="slds-text-body--small"> Contacts • View
+                        Contacts Based on Selected Account</p>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+        <label class="slds-form-element__label" for="select-01">Select Account</label>
+        <div class="slds-form-element__control">
+            <div class="slds-select_container">
+                <select class="slds-select" id="select-01" onchange={onValueSelection}>
+                    iterate all picklist values from accounts list using for:each loop
+                <template for:each={accounts.data} for:item="acc">
+                        <option key={acc.Id} value={acc.Id}>
+                            {acc.Name}
+                        </option>
+                    </template>
+                </select>
+            </div>
+        </div>
+        <template if:true={contacts}>
+            <lightning-card title="Contacts"  >
+                <div style="height: 300px;">
+                    <lightning-datatable
+                                         key-field="Id"
+                                         data={contacts}
+                                         columns={columns}>
+                    </lightning-datatable>
+                </div>    
+            </lightning-card>
+        </template>
+    </lightning-card>
+</template>  
+
+                   
+-->
